@@ -8,6 +8,10 @@
       // ES 2021, Chrome 85, Edge 85, Firefox 77, Opera 71, Safari 13.1
       if (!"".replaceAll) {
         window.stop && stop();
+        window.setTimeout &&
+          setTimeout(function () {
+            document.body.style.display = "none";
+          }, 15);
         document.location.replace(
           // 相对路径 "./ie/#"
           "/ie/#" +
@@ -15,7 +19,6 @@
             document.location.search +
             document.location.hash
         );
-        document.body.style.display = "none";
       }
     </script>
 
