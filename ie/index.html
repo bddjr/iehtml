@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- Powered by https://github.com/bddjr/iehtml , Using MIT license. -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // 浏览器版本似乎不低
+      // ES 2021, Chrome 85, Edge 85, Firefox 77, Opera 71, Safari 13.1
+      if ("".replaceAll) {
+        if (document.location.hash[1] == "/") {
+          window.stop && stop();
+          var i = 0;
+          function setBodyDisplayNone() {
+            if (document.body && document.body.style) {
+              document.body.style.display = "none";
+            } else if (i < 500) {
+              setTimeout(setBodyDisplayNone, 25);
+              i += 25;
+            }
+          }
+          setTimeout(setBodyDisplayNone);
+          document.location.replace(document.location.hash.slice(1));
+        } else backToLogin = "../";
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>您的浏览器版本过低</title>
+    <link rel="shortcut icon" href="./icon/iepage-24.png" type="image/png" />
+    <style>
+      * {
+        font-family: Arial, "Microsoft Yahei", "黑体", "SimHei", system-ui;
+        color-scheme: light dark;
+      }
+    </style>
+    <style>
+      body {
+        margin: 24px;
+      }
+      .browserp {
+        margin-top: 6px;
+        margin-bottom: 0px;
+      }
+      .browsera {
+        color: #0069c2;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px;
+        line-height: 24px;
+      }
+      img {
+        margin-bottom: -18px;
+        background: none;
+        border-width: 0;
+        margin-right: 6px;
+      }
+      span {
+        font-size: 24px;
+      }
+      .browsera:hover .browseraunderline {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+      }
+      .displaylink {
+        color: gray;
+        text-decoration: none;
+        margin-left: 43px;
+        margin-top: 6px;
+        font-size: 14px;
+      }
+      .h1 {
+        margin-bottom: 10px;
+        margin-top: 20px;
+        font-weight: normal;
+      }
+      .h1p {
+        margin-bottom: 36px;
+        margin-top: 0px;
+      }
+      .sys {
+        margin-top: 32px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        word-spacing: 6px;
+      }
+      .debug {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 12px 24px;
+        background-color: #d4ffd1;
+        color: #006f00;
+      }
+      .backtologin {
+        color: #0079eb;
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+      }
+      .powered {
+        display: inline-block;
+        color: gray;
+        margin-top: 32px;
+        margin-bottom: 12px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .powered:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        .browsera {
+          color: #8cb4ff;
+        }
+        .debug {
+          background-color: #006f00;
+          color: #d4ffd1;
+        }
+        .backtologin {
+          color: #b4ceff;
+        }
+        .h1,
+        .h1p,
+        .sys {
+          color: #cccccc;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="h1" class="h1">您的浏览器版本过低，请更换浏览器。</h1>
+    <p class="h1p">
+      The version of your browser is outdated, please change your browser.
+    </p>
+
+    <p class="sys">WinXP Win7 Win8:</p>
+    <p class="browserp supermuim">
+      <a
+        id="supermiuma"
+        name="supermiuma"
+        class="browsera"
+        target="_blank"
+        rel="noopener"
+        href="http://win32subsystem.live/supermium/"
+      >
+        <img height="32" width="32" src="./icon/supermium-32.png" alt="" />
+        <span class="browseraunderline">Supermium</span>
+        <br />
+        <span class="displaylink" id="supermiumdisplaylink"
+          >http://win32subsystem.live/supermium/</span
+        >
+      </a>
+    </p>
+    <script>
+      // 如果不是IE 或IE版本大于等于8，就改为https
+      // 已知 Win7 x64 sp1 预装 IE 8
+      if (
+        navigator.userAgent.indexOf("MSIE") < 0 ||
+        navigator.userAgent.indexOf("Trident/") >= 0
+      ) {
+        supermiumdisplaylink.innerHTML = supermiuma.href =
+          supermiuma.href.replace("http:", "https:");
+      }
+    </script>
+
+    <p class="sys">Win10 Win11 Android MacOS Linux:</p>
+    <p class="browserp">
+      <a
+        class="browsera"
+        target="_blank"
+        rel="noopener"
+        href="https://www.google.cn/chrome/"
+      >
+        <img height="32" width="32" src="./icon/chrome-32.png" alt="" />
+        <span class="browseraunderline">Google Chrome</span>
+        <br />
+        <span class="displaylink">https://www.google.cn/chrome/</span>
+      </a>
+    </p>
+    <p class="browserp">
+      <a
+        class="browsera"
+        target="_blank"
+        rel="noopener"
+        href="https://www.microsoft.com/edge/download"
+      >
+        <img height="32" width="32" src="./icon/edge-32.png" alt="" />
+        <span class="browseraunderline">Microsoft Edge</span>
+        <br />
+        <span class="displaylink">https://www.microsoft.com/edge/download</span>
+      </a>
+    </p>
+    <p class="browserp">
+      <a
+        class="browsera"
+        target="_blank"
+        rel="noopener"
+        href="https://www.mozilla.org/firefox/new/"
+      >
+        <img height="32" width="32" src="./icon/firefox-32.png" alt="" />
+        <span class="browseraunderline">Firefox</span>
+        <br />
+        <span class="displaylink">https://www.mozilla.org/firefox/new/</span>
+      </a>
+    </p>
+    <a
+      class="powered"
+      href="https://github.com/bddjr/iehtml"
+      target="_blank"
+      rel="noopener"
+      >Powered by iehtml, using MIT license.</a
+    >
+    <script>
+      if (window.backToLogin) {
+        var debugdiv = document.createElement("div");
+        debugdiv.className = "debug";
+        debugdiv.innerHTML =
+          '✔ 您的浏览器版本不低，该页面仅用于调试。<a class="backtologin aunderline" onclick="document.location.assign(backToLogin)">返回登录页面</a>';
+        document.body.appendChild(debugdiv);
+        (window.onresize = function () {
+          document.getElementById("h1").style.marginTop =
+            debugdiv.clientHeight + 20 + "px";
+        })();
+      }
+    </script>
+  </body>
+</html>
