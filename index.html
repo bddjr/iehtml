@@ -12,12 +12,12 @@
           setTimeout(function () {
             document.body.style.display = "none";
           }, 15);
+        var l = document.location;
         document.location.replace(
-          // 相对路径 "./ie/#"
-          "/ie/#" +
-            document.location.pathname +
-            document.location.search +
-            document.location.hash
+          "/ie/#" + l.pathname + l.search + l.hash
+          // 相对路径  "./ie/#" + l.pathname + l.search + l.hash
+          // 指定站点  "http://ie.bddjr.com/ie/#" + l.href
+          // 继承协议  l.protocol + "//ie.bddjr.com/ie/#" + l.href
         );
       }
     </script>
