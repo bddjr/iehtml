@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Powered by https://github.com/bddjr/iehtml , Using MIT license. -->
-<!-- 1.0.5 -->
+<!-- 1.0.6 -->
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -178,11 +178,12 @@
       </a>
     </p>
     <script>
-      // 如果不是IE 或IE版本大于等于8，就改为https
-      // 已知 Win7 x64 sp1 预装 IE 8
+      // 设为https
       if (
-        navigator.userAgent.indexOf("MSIE") < 0 ||
-        navigator.userAgent.indexOf("Trident/") >= 0
+        // 不是版本<=10的IE
+        !/MSIE /.test(navigator.userAgent) ||
+        // Windows NT 版本 6.1 ~ 6.9
+        /Windows NT 6\.[1-9]/.test(navigator.userAgent)
       ) {
         supermiumdisplaylink.innerHTML = supermiuma.href =
           supermiuma.href.replace("http:", "https:");
