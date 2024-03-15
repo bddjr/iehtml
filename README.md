@@ -9,10 +9,10 @@
 git clone https://github.com/bddjr/iehtml
 ```
 
-仅提取 `/ie/` 文件夹
+仅提取 `/ie/` 文件夹（Linux）
 ```
-mv iehtml/ie ie
-rm iehtml
+mv iehtml/ie ./
+rm -rf iehtml
 ```
 
 实例：  
