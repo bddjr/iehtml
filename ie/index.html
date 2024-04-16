@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Powered by https://github.com/bddjr/iehtml , Using MIT license. -->
-<!-- 1.1.1 -->
+<!-- 1.1.2 -->
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -66,44 +66,33 @@
       }
 
       .browserp {
-        margin-top: 6px;
-        margin-bottom: 0px;
+        margin: 14px 0;
       }
 
       .browsera {
         color: #0069c2;
         text-decoration: none;
         display: inline-block;
-      }
-
-      .browseraunderline {
         cursor: pointer;
+        min-width: 250px;
       }
 
       img {
         background: none;
         border-width: 0;
         position: absolute;
-        margin-top: 16px;
-        margin-left: 10px;
+        margin: 16px 16px;
+        margin-right: 0;
       }
 
       .browserspanbox {
+        height: 32px;
+        line-height: 32px;
         font-size: 24px;
         padding-left: 42px;
         display: inline-block;
-        height: 48px;
-        line-height: 24px;
         cursor: pointer;
-        margin: 10px;
-      }
-
-      .displaylink {
-        color: gray;
-        text-decoration: none;
-        margin-left: 1px;
-        margin-top: 6px;
-        font-size: 14px;
+        margin: 16px;
       }
 
       .h1 {
@@ -113,15 +102,8 @@
       }
 
       .h1p {
-        margin-bottom: 36px;
+        margin-bottom: 40px;
         margin-top: 0px;
-      }
-
-      .sys {
-        margin-top: 32px;
-        margin-bottom: 0px;
-        font-size: 20px;
-        word-spacing: 6px;
       }
 
       .debug {
@@ -142,7 +124,7 @@
       }
 
       .footer {
-        margin-top: 32px;
+        margin-top: 40px;
         margin-bottom: 12px;
       }
 
@@ -160,7 +142,7 @@
         text-decoration: underline;
       }
 
-      .browsera:hover .browseraunderline {
+      .browsera:hover .browserspanbox {
         text-decoration: underline;
       }
     </style>
@@ -182,7 +164,6 @@
       The version of your browser is outdated, please change your browser.
     </p>
 
-    <p class="sys">WinXP Win7 Win8:</p>
     <p class="browserp supermuim">
       <a
         id="supermiuma"
@@ -193,13 +174,7 @@
         href="http://win32subsystem.live/supermium/"
       >
         <img height="32" width="32" src="./icon/supermium-32-ie6.png" />
-        <span class="browserspanbox">
-          <span class="browseraunderline">Supermium</span>
-          <br />
-          <span class="displaylink" id="supermiumdisplaylink">
-            http://win32subsystem.live/supermium/
-          </span>
-        </span>
+        <span class="browserspanbox">Supermium</span>
       </a>
     </p>
     <script>
@@ -210,12 +185,10 @@
         // Windows NT 版本 6.1 ~ 6.9
         /Windows NT 6\.[1-9]/.test(navigator.userAgent)
       ) {
-        supermiumdisplaylink.innerHTML = supermiuma.href =
-          supermiuma.href.replace("http:", "https:");
+        supermiuma.href = supermiuma.href.replace("http:", "https:");
       }
     </script>
 
-    <p class="sys">Win10 Win11 Android MacOS Linux:</p>
     <p class="browserp">
       <a
         class="browsera"
@@ -224,11 +197,7 @@
         href="https://www.google.cn/chrome/"
       >
         <img height="32" width="32" src="./icon/chrome-32-ie6.png" />
-        <span class="browserspanbox">
-          <span class="browseraunderline">Google Chrome</span>
-          <br />
-          <span class="displaylink"> https://www.google.cn/chrome/ </span>
-        </span>
+        <span class="browserspanbox">Google Chrome</span>
       </a>
     </p>
     <p class="browserp">
@@ -239,13 +208,7 @@
         href="https://www.microsoft.com/edge/download"
       >
         <img height="32" width="32" src="./icon/edge-32-ie6.png" />
-        <span class="browserspanbox">
-          <span class="browseraunderline">Microsoft Edge</span>
-          <br />
-          <span class="displaylink">
-            https://www.microsoft.com/edge/download
-          </span>
-        </span>
+        <span class="browserspanbox">Microsoft Edge</span>
       </a>
     </p>
     <p class="browserp">
@@ -256,13 +219,7 @@
         href="https://www.mozilla.org/firefox/new/"
       >
         <img height="32" width="32" src="./icon/firefox-32-ie6.png" />
-        <span class="browserspanbox">
-          <span class="browseraunderline">Firefox</span>
-          <br />
-          <span class="displaylink">
-            https://www.mozilla.org/firefox/new/
-          </span>
-        </span>
+        <span class="browserspanbox">Firefox</span>
       </a>
     </p>
     <p class="footer">
