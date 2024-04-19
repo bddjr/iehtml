@@ -2,42 +2,20 @@
 
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<script>
 		// Powered by https://github.com/bddjr/iehtml , Using MIT license.
-		// 如果浏览器不支持部分接口，那就自动跳到 iehtml
-		// ES 2021, Chrome 85, Edge 85, Firefox 77, Opera 71, Safari 13.1
-		if (!"".replaceAll) {
-			window.stop && stop();
-			window.setTimeout &&
-				setTimeout(function () {
-					document.body.style.display = "none";
-				}, 15);
-			var l = document.location;
+		try {
+			// ES2022
+			eval("(class { static { this.a = 1 } })").a.b
+		} catch (e) {
+			if (window.stop) { stop() }
 			document.location.replace(
-				"/ie/#" + l.pathname + l.search + l.hash
-				// 相对路径  "./ie/#" + l.pathname + l.search + l.hash
-				// 指定站点  "http://ie.bddjr.com/ie/#" + l.href
-				// 继承协议  "//ie.bddjr.com/ie/#" + l.href
+				"./ie/#" + document.location.pathname + document.location.search + document.location.hash
 			);
 		}
 	</script>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>example for iehtml</title>
-	<style>
-		* {
-			color-scheme: light dark;
-		}
-
-		body {
-			margin: 24px;
-		}
-
-		p {
-			font-size: 24px;
-		}
-	</style>
 </head>
 
 <body>
