@@ -11,6 +11,7 @@
 			eval("(class { static { this.a = 1 } })").a.b
 		} catch (e) {
 			if (window.stop) { stop() }
+			try { document.getElementsByTagName('html')[0].style.display = 'none' } catch (e) { }
 			document.location.replace(
 				"./ie/#" + document.location.pathname + document.location.search + document.location.hash
 			);
