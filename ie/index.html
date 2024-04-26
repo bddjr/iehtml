@@ -103,14 +103,6 @@
 		.footerLinkA:hover {
 			text-decoration: underline;
 		}
-
-		#divSubmit * {
-			position: absolute;
-			bottom: 0;
-			background: none;
-			border: none;
-			color: #ececec;
-		}
 	</style>
 </head>
 
@@ -145,10 +137,6 @@
 		</p>
 	</div>
 
-	<div id="divSubmit">
-		<input id="submitInput" type="submit" tabindex="-1"></input>
-		<button id="submitButton" tabindex="-1"></button>
-	</div>
 	<script>
 		(function (langs) {
 			if (!langs[0]) return;
@@ -168,20 +156,10 @@
 			for (var i = 0; i < langs.length; i++) {
 				var name = langs[i].toLowerCase();
 				var v = allLangs.values[allLangs.anotherName[name] || name];
-				if (v) h1.innerHTML = v;
+				if (v) document.title = h1.innerHTML = v;
 				if (v !== undefined) return;
 			}
-		})(navigator.languages || [navigator.language || (function () {
-			function checkName(innerHTML) {
-				submitButton.value = submitButton.innerHTML = innerHTML;
-				return submitButton.clientWidth === submitInput.clientWidth;
-			}
-			if (checkName('Submit')) return 'en-us';
-			if (checkName('提交') || checkName('提交查询内容')) return 'zh-cn';
-		})()])
-
-		document.body.removeChild(divSubmit);
-		document.title = h1.innerHTML;
+		})(navigator.languages || [navigator.language || navigator.browserLanguage])
 	</script>
 </body>
 
