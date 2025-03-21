@@ -8,16 +8,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		* {
-			font-family: system-ui, Arial;
+			font-family: system-ui, 'Microsoft YaHei UI', Arial;
 		}
 
 		body {
-			max-width: 400px;
-			margin: 32px auto;
+			margin: 0;
 		}
 
-		ul {
-			margin-bottom: 40px;
+		.head {
+			background-color: #1b85fe;
+			text-align: center;
+			color: white;
+			font-size: 32px;
+			padding: 60px 0;
+			line-height: 50px;
+		}
+
+		.main {
+			max-width: 380px;
+			margin: 24px auto;
 		}
 
 		li {
@@ -31,46 +40,57 @@
 </head>
 
 <body>
-	<h2>请更换浏览器</h2>
-	<ul>
-		<li>
-			谷歌浏览器 Google Chrome
-			<ul>
-				<li><a href="https://www.google.cn/chrome/" target="_blank"
-						rel="noopener noreferrer">google.cn/chrome</a></li>
-				<li><a href="https://dl.google.com/update2/installers/ChromeSetup.exe" target="_blank"
-						rel="noopener noreferrer">ChromeSetup.exe</a></li>
-			</ul>
-		</li>
-	</ul>
-	<ul>
-		<li>
-			微软浏览器 Microsoft Edge
-			<ul>
-				<li><a href="https://www.microsoft.com/edge" target="_blank"
-						rel="noopener noreferrer">microsoft.com/edge</a></li>
-				<li><a href="microsoft-edge:" target="_blank" rel="noopener noreferrer">microsoft-edge:</a></li>
-			</ul>
-		</li>
-	</ul>
-	<ul>
-		<li>
-			火狐浏览器 Mozilla Firefox
-			<ul>
-				<li><a href="https://www.mozilla.org/firefox/new/" target="_blank"
-						rel="noopener noreferrer">mozilla.org/firefox/new</a></li>
-			</ul>
-		</li>
-	</ul>
-	<ul>
-		<li>
-			Supermium
-			<ul>
-				<li><a href="http://win32subsystem.live/supermium/" target="_blank"
-						rel="noopener noreferrer">win32subsystem.live/supermium</a></li>
-			</ul>
-		</li>
-	</ul>
+	<div class="head">
+		您的浏览器太旧了<br>
+		请更换浏览器
+	</div>
+	<div class="main">
+		<ul>
+			<li>
+				Google Chrome<br>
+				谷歌浏览器
+				<ul>
+					<li><a href="https://www.google.cn/chrome/" target="_blank" rel="noopener noreferrer">官方网站</a></li>
+					<li><a href="https://dl.google.com/update2/installers/ChromeSetup.exe" target="_blank"
+							rel="noopener noreferrer">下载 ChromeSetup.exe</a></li>
+				</ul>
+			</li>
+		</ul>
+		<hr>
+		<ul>
+			<li>
+				Microsoft Edge<br>
+				微软浏览器
+				<ul>
+					<li><a href="https://www.microsoft.com/zh-cn/edge" target="_blank"
+							rel="noopener noreferrer">官方网站</a></li>
+					<li><a href="microsoft-edge:" target="_blank" rel="noopener noreferrer">启动</a></li>
+				</ul>
+			</li>
+		</ul>
+		<hr>
+		<ul>
+			<li>
+				Mozilla Firefox<br>
+				火狐浏览器
+				<ul>
+					<li><a href="https://www.mozilla.org/firefox/new/" target="_blank"
+							rel="noopener noreferrer">官方网站</a></li>
+				</ul>
+			</li>
+		</ul>
+		<hr>
+		<ul>
+			<li>
+				Supermium<br>
+				(用于旧版Windows)
+				<ul>
+					<li><a href="http://win32subsystem.live/supermium/" target="_blank"
+							rel="noopener noreferrer">官方网站</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
 </body>
 
 </html>

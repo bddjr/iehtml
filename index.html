@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+		// Chrome 97, ES 2023
+		// Not available in IE because script is blocked.
+		if (![].findLast) {
+			window.stop && stop()
+			location.replace(
+				/^zh/i.test(navigator.language)
+					? "ie-zh.html"
+					: "ie.html"
+			)
+		}
+	</script>
+</head>
+
+<body>
+	ok
+</body>
+
+</html>
